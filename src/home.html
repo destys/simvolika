@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- Интро -->
+			<section class="intro">
+				<div class="intro__container">
+					<div class="intro__slider swiper">
+						<div class="intro__wrapper swiper-wrapper">
+							<div class="intro__slide swiper-slide slide-intro">
+								<div class="slide-intro__content">
+									<h1 class=" slide-intro__title _h0">Шевроны <br />
+										нашивки, патчи</h1>
+									<div class="slide-intro__subtitle">Доставка во все регионы России</div>
+									<div class="slide-intro__actions">
+										<a href="#order" class="button">Заказать</a>
+										<button type="button" class="button _yellow _arr">Купить
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#up-down"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="slide-intro__image-ibg">
+									<img data-src="@img/banners/banner1.png" alt="Шевроны нашивки, патчи" />
+								</div>
+							</div>
+							<div class="intro__slide swiper-slide slide-intro">
+								<div class="slide-intro__content">
+									<h2 class=" slide-intro__title _h0">Кастомный <br /> заголовок</h2>
+									<div class="slide-intro__subtitle">Доставка во все регионы России</div>
+									<div class="slide-intro__actions">
+										<a href="#order" class="button">Заказать</a>
+										<button type="button" class="button _yellow _arr">Купить
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#up-down"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="slide-intro__image-ibg">
+									<img data-src="@img/banners/banner1.png" alt="Шевроны нашивки, патчи" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /. Интро -->
+			<!-- Примеры работ -->
+			<section class="examples">
+				<div class="examples__container">
+					<h2 class="examples__title">Примеры работ</h2>
+					<div class="examples__slider swiper">
+						<div class="examples__wrapper swiper-wrapper">
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон StarWars",
+							"image":"product1.png",
+							"price":"230"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон 2PAC",
+							"image":"product2.png",
+							"price":"140"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Клуб 30-летних девственниц",
+							"image":"product3.png",
+							"price":"120"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон StarWars",
+							"image":"product1.png",
+							"price":"230"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон 2PAC",
+							"image":"product2.png",
+							"price":"140"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Клуб 30-летних девственниц",
+							"image":"product3.png",
+							"price":"120"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон StarWars",
+							"image":"product1.png",
+							"price":"230"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Шеврон 2PAC",
+							"image":"product2.png",
+							"price":"140"
+							})
+							@@include('html/_examples-slide.htm',{
+							"title":"Клуб 30-летних девственниц",
+							"image":"product3.png",
+							"price":"120"
+							})
+						</div>
+					</div>
+					<div class="examples__actions actions-examples">
+						<button class="actions-examples__button button _yellow _arr">
+							Другие шевроны
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#up-down"></use>
+							</svg>
+						</button>
+						<div class="actions-examples__nav">
+							<button type="button" class="actions-examples__left button">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#left"></use>
+								</svg>
+							</button>
+							<button type="button" class="actions-examples__right button">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#left"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /. Примеры работ -->
+			<!-- На заказ -->
+			<section class="to-order">
+				<div class="to-order__container">
+					<h2 class="to-order__title">На заказ</h2>
+					<div class="to-order__subtitle">Изготавливаем от 1 шт.</div>
+					<div class="to-order__list">
+						<div class="to-order__item item-to-order">
+							<h3 class="item-to-order__title"></h3>
+							<div class="item-to-order__image">
+								<img data-src="@img/to-order/image1.png" alt="image1">
+							</div>
+							<div class="item-to-order__text">
+								<p>На именные шевроны и шевроны с позывными в стандартном
+									размере стоимость фиксированная</p>
+							</div>
+							<div class="item-to-order__sizes sizes-item-to-order">
+								<div class="sizes-item-to-order__item">
+									<div class="sizes-item-to-order__left">
+										<p>Стандартный размер</p>
+										<p>(125х25мм)</p>
+									</div>
+									<div class="sizes-item-to-order__price">200 ₽</div>
+								</div>
+								<div class="sizes-item-to-order__item">
+									<div class="sizes-item-to-order__left">
+										<p>Свой размер</p>
+										<p>индивидуальный расчёт</p>
+									</div>
+									<div class="sizes-item-to-order__price">∞</div>
+								</div>
+							</div>
+						</div>
+						<div class="to-order__item item-to-order">
+							<h3 class="item-to-order__title"></h3>
+							<div class="item-to-order__image">
+								<img data-src="@img/to-order/image2.png" alt="image2">
+							</div>
+							<div class="item-to-order__text">
+								<p>
+									Стоимость рассчитывается индивидуально</p>
+								<h4>Критерии влияющие на стоимость</h4>
+								<ul>
+									<li>Количество партии</li>
+									<li>Сложность макета</li>
+									<li>Размер и форма шеврона</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a href="#order" class="to-order__button button _yellow">Заказать</a>
+				</div>
+			</section>
+			<!-- /. На заказ -->
+			<!-- Order -->
+			<section class="contacts" id="order">
+				<div class="contacts__container">
+					<div class="contacts__item item-contacts">
+						<h2 class="item-contacts__title">Доставка</h2>
+						<div class="item-contacts__subtitle">Мы доставляем в любой город России</div>
+						<div class="item-contacts__list">
+							<div class="item-contacts__method">
+								<div class="item-contacts__image">
+									<img data-src="@img/contacts/pochtarf.png" alt="pochtarf" width="82" height="53">
+								</div>
+							</div>
+							<div class="item-contacts__method">
+								<div class="item-contacts__image">
+									<img data-src="@img/contacts/cdec.png" alt="cdec" width="106" height="30">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__item item-contacts">
+						<h2 class="item-contacts__title">Напишите нам</h2>
+						<div class="item-contacts__subtitle">Если у вас остались вопросы, или вы хотите оформить заказ
+						</div>
+						<div class="item-contacts__list">
+							<a href="#" class="item-contacts__method" target="_blank">
+								<div class="item-contacts__image">
+									<img data-src="@img/contacts/wa.png" alt="WhatsApp" width="70" height="70">
+								</div>
+								<span>WhatsApp</span>
+							</a>
+							<a href="#" class="item-contacts__method" target="_blank">
+								<div class="item-contacts__image">
+									<img data-src="@img/contacts/tg.png" alt="Telegram" width="70" height="70">
+								</div>
+								<span>Telegram</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /. Order -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

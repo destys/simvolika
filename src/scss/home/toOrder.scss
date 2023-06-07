@@ -1,0 +1,114 @@
+.to-order {
+    // .to-order__container
+    &__container {
+    }
+    // .to-order__title
+    &__title {
+        margin-bottom: rem(16);
+        @extend %h2;
+    }
+    // .to-order__subtitle
+    &__subtitle {
+        margin-bottom: rem(40);
+        @extend %description-l;
+        color: $secondaryColor;
+    }
+    // .to-order__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(32);
+
+        margin-bottom: rem(40);
+    }
+    // .to-order__item
+    &__item {
+        padding: rem(32);
+        background: rgba(53, 72, 110, 0.1);
+        border: 1px solid rgba(53, 72, 110, 0.2);
+        border-radius: 8px;
+    }
+    // .to-order__button
+    &__button {
+    }
+}
+.item-to-order {
+    // .item-to-order__title
+    &__title {
+    }
+    // .item-to-order__image
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: rem(24);
+        height: rem(280);
+
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 8px;
+
+        img {
+            width: 100%;
+            max-width: rem(250);
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    // .item-to-order__text
+    &__text {
+        margin-bottom: rem(24);
+        p {
+            margin-bottom: rem(16);
+            color: $secondaryColor;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: rem(8);
+            font-weight: 700;
+        }
+
+        ol,
+        ul {
+            li {
+                list-style: inside;
+            }
+        }
+    }
+    // .item-to-order__sizes
+    &__sizes {
+    }
+}
+.sizes-item-to-order {
+    // .sizes-item-to-order__item
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+    }
+    // .sizes-item-to-order__left
+    &__left {
+        p {
+            &:first-child {
+                font-weight: 700;
+            }
+
+            &:last-child {
+                font-size: rem(14);
+                color: $secondaryColor;
+            }
+        }
+    }
+    // .sizes-item-to-order__price
+    &__price {
+        @extend %h4-mobile;
+    }
+}
