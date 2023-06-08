@@ -35,6 +35,8 @@
 .item-to-order {
     // .item-to-order__title
     &__title {
+        margin-bottom: rem(32);
+        @extend %h3-mobile;
     }
     // .item-to-order__image
     &__image {
