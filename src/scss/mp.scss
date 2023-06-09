@@ -1,20 +1,29 @@
 .mp {
-    position: absolute;
+    display: none;
 
-    background: #111f41;
-    border: 1px solid rgba(53, 72, 110, 0.3);
-    border-radius: 24px;
-    color: #fff;
+    .mp-mobile & {
+        display: block;
+    }
 
-    padding: rem(16);
-    width: rem(390);
+    @media (min-width: $tablet) {
+        position: absolute;
 
-    opacity: 0;
-    z-index: -1;
+        background: #111f41;
+        border: 1px solid rgba(53, 72, 110, 0.3);
+        border-radius: 24px;
+        color: #fff;
 
-    ._active & {
-        opacity: 1;
-        z-index: 20;
+        padding: rem(16);
+        width: rem(390);
+
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.2s ease-out;
+
+        ._active & {
+            opacity: 1;
+            z-index: 20;
+        }
     }
 
     // .mp__list
@@ -42,5 +51,41 @@
         span {
             @extend %text-bold-m;
         }
+    }
+
+    // .mp__button
+    &__close {
+        margin-top: rem(24);
+        width: 100%;
+    }
+}
+
+.mp-mobile {
+    position: fixed;
+    left: 0;
+    bottom: rem(60);
+
+    background: #111f41;
+    border: 1px solid rgba(53, 72, 110, 0.3);
+    border-radius: 24px;
+    color: #fff;
+
+    padding: rem(16);
+    width: 100%;
+    max-width: rem(480);
+
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(200%);
+    transition: transform 0.4s ease-out;
+
+    &._active {
+        opacity: 1;
+        z-index: 150;
+        transform: translateY(0);
+    }
+
+    @media (min-width: $tablet) {
+        display: none;
     }
 }

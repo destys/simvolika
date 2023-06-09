@@ -1,21 +1,24 @@
 .contacts {
-    margin-bottom: rem(60);
+    @include adaptiveValue("margin-bottom", 60, 20);
     // .contacts__container
     &__container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: rem(16);
 
         border: 0;
         background-color: transparent;
         padding: 0;
+
+        @media (min-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     // .contacts__item
     &__item {
         display: flex;
         flex-direction: column;
 
-        padding: rem(40);
+        @include adaptiveValue("padding", 40, 24);
         background-color: $bgSection;
         border: 1px solid rgba(53, 72, 110, 0.3);
         border-radius: 24px;
@@ -42,7 +45,7 @@
     }
     // .item-contacts__subtitle
     &__subtitle {
-        margin-bottom: rem(40);
+        @include adaptiveValue("margin-bottom", 40, 24);
         @extend %description-l-mobile;
         color: $secondaryColor;
     }
@@ -51,6 +54,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(16);
+        @include adaptiveValue("gap", 16, 8);
         margin-top: auto;
     }
     // .item-contacts__method
@@ -61,7 +65,7 @@
         align-items: center;
         gap: rem(16);
 
-        padding: rem(30);
+        @include adaptiveValue("padding", 30, 20);
 
         height: rem(170);
 

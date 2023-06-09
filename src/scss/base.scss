@@ -3,13 +3,13 @@
 @import "base/forms/forms";
 
 // Стилі попапів
-// @import "base/popup";
+@import "base/popup";
 
 // Стилі спойлерів
 // @import "base/spollers";
 
 // Стилі табів
-// @import "base/tabs";
+@import "base/tabs";
 
 // Стилі мап
 // @import "base/maps";
@@ -142,14 +142,14 @@
 	line-height: math.div(94, 84);
 	font-weight: 900;
 	font-size: rem(84);
-	@include adaptiveValue("font-size", 84, 46, 0, 1110, 390);
+	@include adaptiveValue("font-size", 84, 46);
 }
 
 //styleName: H2;
 %h2 {
 	line-height: math.div(54, 46);
 	font-weight: 900;
-	font-size: rem(46);
+	@include adaptiveValue("font-size", 46, 32);
 }
 //styleName: H3 - mobile;
 %h3-mobile {
@@ -168,13 +168,19 @@
 	line-height: math.div(40, 32);
 	font-weight: 500;
 	font-size: rem(32);
-	@include adaptiveValue("font-size", 32, 24, 0, 1110, 390);
+	@include adaptiveValue("font-size", 32, 24);
 }
 //styleName: description L-mobile;
 %description-l-mobile {
 	line-height: math.div(32, 24);
 	font-weight: 400;
 	font-size: rem(24);
+}
+//styleName: Bold text - M;
+%text-medium-m {
+	line-height: math.div(24, 16);
+	font-weight: 500;
+	font-size: rem(16);
 }
 //styleName: Bold text - M;
 %text-bold-m {

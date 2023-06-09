@@ -1,17 +1,32 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from "./functions.js";
+import { bodyLock, bodyUnlock, isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
-/* 
-const mpList = document.querySelector('.mp');
- */
-const mpBtns = document.querySelectorAll('[data-mp]');
 
-if (mpBtns.length) {
+//========================================================================================================================================================
+
+const mpBtns = document.querySelectorAll('[data-mp]');
+const mpMobile = document.querySelector('.mp-mobile');
+
+if (mpBtns.length && mpMobile) {
+    const mpClose = mpMobile.querySelector('.mp__close');
+
     mpBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
-            btn.classList.toggle('_active');
+            if (window.innerWidth > 991) {
+                btn.classList.toggle('_active');
+            } else {
+                mpMobile.classList.add('_active');
+                bodyLock(100);
+            }
         });
     })
+
+    if (mpClose) {
+        mpClose.addEventListener("click", function (e) {
+            mpMobile.classList.remove('_active');
+            bodyUnlock(100);
+        });
+    }
 }
 

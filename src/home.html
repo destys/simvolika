@@ -128,9 +128,25 @@
 				<div class="to-order__container">
 					<h2 class="to-order__title">На заказ</h2>
 					<div class="to-order__subtitle">Изготавливаем от 1 шт.</div>
+					<div data-tabs data-tabs-animate="500" class="to-order__tabs tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button class="tabs__title _tab-active">Именной шеврон</button>
+							<button class="tabs__title">Свой дизайн</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body tabs__body_0">
+
+							</div>
+							<div class="tabs__body tabs__body_1">
+
+							</div>
+						</div>
+					</div>
 					<div class="to-order__list">
-						<div class="to-order__item item-to-order">
-							<h3 class="item-to-order__title">Именной шеврон</h3>
+						<div class="to-order__item item-to-order _.tab-active" data-da=".to-order .tabs__body_0, 992">
+							<h3 class="item-to-order__title">
+								Именной шеврон
+							</h3>
 							<div class="item-to-order__image">
 								<img data-src="@img/to-order/image1.png" alt="image1">
 							</div>
@@ -155,7 +171,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="to-order__item item-to-order">
+						<div class="to-order__item item-to-order" data-da=".to-order .tabs__body_1, 992">
 							<h3 class="item-to-order__title">Свой дизайн</h3>
 							<div class="item-to-order__image">
 								<img data-src="@img/to-order/image2.png" alt="image2">
@@ -177,7 +193,7 @@
 			</section>
 			<!-- /. На заказ -->
 			<!-- Order -->
-			<section class="contacts" id="order">
+			<section class="contacts">
 				<div class="contacts__container">
 					<div class="contacts__item item-contacts">
 						<h2 class="item-contacts__title">Доставка</h2>
@@ -195,7 +211,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="contacts__item item-contacts">
+					<div class="contacts__item item-contacts" id="order">
 						<h2 class="item-contacts__title">Напишите нам</h2>
 						<div class="item-contacts__subtitle">Если у вас остались вопросы, или вы хотите оформить заказ
 						</div>

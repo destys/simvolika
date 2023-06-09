@@ -23,20 +23,50 @@
     }
     // .to-order__item
     &__item {
-        padding: rem(32);
-        background: rgba(53, 72, 110, 0.1);
-        border: 1px solid rgba(53, 72, 110, 0.2);
-        border-radius: 8px;
+        @media (min-width: $tablet) {
+            padding: rem(32);
+            background: rgba(53, 72, 110, 0.1);
+            border: 1px solid rgba(53, 72, 110, 0.2);
+            border-radius: 8px;
+        }
     }
     // .to-order__button
     &__button {
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    // .to-order__tabs
+    &__tabs {
+        @media (min-width: $tablet) {
+            display: none;
+        }
+        .tabs {
+            // .tabs__navigation
+            &__navigation {
+            }
+            // .tabs__content
+            &__content {
+            }
+            // .tabs__body
+            &__body {
+            }
+        }
     }
 }
 .item-to-order {
     // .item-to-order__title
     &__title {
-        margin-bottom: rem(32);
-        @extend %h3-mobile;
+        display: none;
+
+        @media (min-width: $tablet) {
+            display: block;
+            margin-bottom: rem(32);
+            line-height: math.div(40, 32);
+            font-weight: 900;
+            font-size: rem(32);
+        }
     }
     // .item-to-order__image
     &__image {
@@ -48,6 +78,7 @@
         height: rem(280);
 
         background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(53, 72, 110, 0.2);
         border-radius: 8px;
 
         img {

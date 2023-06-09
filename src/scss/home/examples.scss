@@ -73,11 +73,18 @@
             bottom: 100%;
             left: 0;
         }
+
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
     }
     // .actions-examples__nav
     &__nav {
-        display: flex;
-        gap: rem(8);
+        display: none;
+        @media (min-width: $mobileSmall) {
+            display: flex;
+            gap: rem(8);
+        }
     }
     &__left,
     &__right {
