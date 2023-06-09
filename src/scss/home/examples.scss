@@ -69,6 +69,10 @@
 .actions-examples {
     // .actions-examples__button
     &__button {
+        .mp {
+            bottom: 100%;
+            left: 0;
+        }
     }
     // .actions-examples__nav
     &__nav {

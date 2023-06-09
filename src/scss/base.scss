@@ -142,6 +142,7 @@
 	line-height: math.div(94, 84);
 	font-weight: 900;
 	font-size: rem(84);
+	@include adaptiveValue("font-size", 84, 46, 0, 1110, 390);
 }
 
 //styleName: H2;
@@ -167,10 +168,17 @@
 	line-height: math.div(40, 32);
 	font-weight: 500;
 	font-size: rem(32);
+	@include adaptiveValue("font-size", 32, 24, 0, 1110, 390);
 }
 //styleName: description L-mobile;
 %description-l-mobile {
 	line-height: math.div(32, 24);
 	font-weight: 400;
 	font-size: rem(24);
+}
+//styleName: Bold text - M;
+%text-bold-m {
+	line-height: math.div(24, 16);
+	font-weight: 700;
+	font-size: rem(16);
 }

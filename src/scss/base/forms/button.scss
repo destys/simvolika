@@ -43,3 +43,9 @@
 		width: 100%;
 	}
 }
+
+[data-mp] {
+	&._active {
+		position: relative;
+	}
+}

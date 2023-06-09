@@ -18,37 +18,30 @@
 									<h1 class=" slide-intro__title _h0">Шевроны <br />
 										нашивки, патчи</h1>
 									<div class="slide-intro__subtitle">Доставка во все регионы России</div>
-									<div class="slide-intro__actions">
-										<button type="button" class="button _yellow _arr">Купить
-											<svg>
-												<use xlink:href="@img/icons/icons.svg#up-down"></use>
-											</svg>
-										</button>
-										<a href="#order" class="button">На заказ</a>
-									</div>
 								</div>
 								<div class="slide-intro__image-ibg">
-									<img data-src="@img/banners/banner1.png" alt="Шевроны нашивки, патчи" />
+									<img src="@img/banners/banner1.png" alt="Шевроны нашивки, патчи" />
 								</div>
 							</div>
 							<div class="intro__slide swiper-slide slide-intro">
 								<div class="slide-intro__content">
 									<h2 class=" slide-intro__title _h0">Кастомный <br /> заголовок</h2>
 									<div class="slide-intro__subtitle">Доставка во все регионы России</div>
-									<div class="slide-intro__actions">
-										<a href="#order" class="button">Заказать</a>
-										<button type="button" class="button _yellow _arr">Купить
-											<svg>
-												<use xlink:href="@img/icons/icons.svg#up-down"></use>
-											</svg>
-										</button>
-									</div>
 								</div>
 								<div class="slide-intro__image-ibg">
 									<img data-src="@img/banners/banner1.png" alt="Шевроны нашивки, патчи" />
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="intro__actions">
+						<button type="button" class="button _yellow _arr" data-mp>Купить
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#up-down"></use>
+							</svg>
+							@@include('html/_mp.htm',{})
+						</button>
+						<a href="#order" class="button">На заказ</a>
 					</div>
 				</div>
 			</section>
@@ -107,11 +100,12 @@
 						</div>
 					</div>
 					<div class="examples__actions actions-examples">
-						<button class="actions-examples__button button _yellow _arr">
+						<button class="actions-examples__button button _yellow _arr" data-mp>
 							Другие шевроны
 							<svg>
 								<use xlink:href="@img/icons/icons.svg#up-down"></use>
 							</svg>
+							@@include('html/_mp.htm',{})
 						</button>
 						<div class="actions-examples__nav">
 							<button type="button" title="Влево" class="actions-examples__left button">
@@ -225,6 +219,7 @@
 			<!-- /. Order -->
 		</main>
 		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>
