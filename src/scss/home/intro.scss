@@ -2,7 +2,7 @@
     @include adaptiveValue("margin-top", 40, 8);
     // .intro__container
     &__container {
-        padding: 0;
+        padding: 0 !important;
         background-color: transparent;
         border-radius: 0;
         border: 0;
