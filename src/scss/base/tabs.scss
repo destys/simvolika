@@ -30,7 +30,7 @@
 		&._tab-active {
 			box-shadow: 0px 2px 16px rgba(0, 13, 46, 0.08);
 			border-radius: 8px;
-			background: $bgAction;
+			background: rgba($bgAction, 0.6);
 		}
 	}
 	// .tabs__content

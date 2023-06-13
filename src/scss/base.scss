@@ -141,7 +141,6 @@
 %h0 {
 	line-height: math.div(94, 84);
 	font-weight: 900;
-	font-size: rem(84);
 	@include adaptiveValue("font-size", 84, 46);
 }
 
@@ -167,7 +166,6 @@
 %description-l {
 	line-height: math.div(40, 32);
 	font-weight: 500;
-	font-size: rem(32);
 	@include adaptiveValue("font-size", 32, 24);
 }
 //styleName: description L-mobile;

@@ -51,6 +51,23 @@
             }
             // .tabs__body
             &__body {
+                opacity: 0;
+                height: 0;
+                transition: transform 0.3s ease-out, opacity 0.2s ease-out;
+
+                &:first-child {
+                    transform: translateX(-200%);
+                }
+
+                &:last-child {
+                    transform: translateX(200%);
+                }
+
+                &._tab-active {
+                    transform: translateX(0);
+                    height: auto;
+                    opacity: 1;
+                }
             }
         }
     }

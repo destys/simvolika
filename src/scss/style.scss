@@ -26,7 +26,7 @@ $fontSize: rem(16); // где 14 (px) - размер шрифта по умол�
 $mainColor: rgba(#fff, 0.95); // White-primary
 $secondaryColor: rgba(#fff, 0.66); // White-secondary
 $bgSection: #111f41; // Section background color
-$bgAction: rgba(#35486e, 0.6); // Action background color
+$bgAction: #35486e; // Action background color
 
 $yellow: #f5bc25;
 
@@ -116,7 +116,7 @@ body {
 			max-width: rem($containerWidth);
 			margin: 0 auto;
 
-			@media (max-width: rem($maxWidthContainer)) {
+			@media (max-width: rem($containerWidth + $containerPadding)) {
 				margin: 0 rem(16);
 			}
 		}

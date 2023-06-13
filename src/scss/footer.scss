@@ -5,7 +5,7 @@
     box-shadow: 0px -10px 50px rgba(0, 6, 20, 0.6);
 
     @media (min-width: $mobile) {
-        padding: rem(50);
+        padding: rem(50); 
     }
 
     // .footer__container
@@ -13,10 +13,6 @@
         padding: 0;
         background-color: transparent;
         border: 0;
-
-        /* @media (max-width: $mobile) {
-            margin: 0;
-        } */
     }
     // .footer__top
     &__top {
@@ -93,10 +89,10 @@
         text-align: center;
 
         a {
+            font-size: rem(24);
             white-space: nowrap;
             &:first-child {
                 font-weight: 900;
-                font-size: rem(24);
 
                 @media (min-width: $mobile) {
                     font-weight: 700;
@@ -104,7 +100,6 @@
             }
 
             &:last-child {
-                font-size: rem(24);
                 color: $secondaryColor;
 
                 @media (min-width: $mobile) {

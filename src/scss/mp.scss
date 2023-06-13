@@ -1,5 +1,7 @@
 .mp {
-    display: none;
+    @media (max-width: $tablet) {
+        display: none;
+    }
 
     .mp-mobile & {
         display: block;
@@ -63,11 +65,12 @@
 .mp-mobile {
     position: fixed;
     left: 0;
-    bottom: rem(60);
+    bottom: 0;
 
     background: #111f41;
     border: 1px solid rgba(53, 72, 110, 0.3);
-    border-radius: 24px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
     color: #fff;
 
     padding: rem(16);

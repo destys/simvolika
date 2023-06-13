@@ -7,7 +7,7 @@
 
         border: 0;
         background-color: transparent;
-        padding: 0;
+        padding: 0 !important;
 
         @media (min-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -25,12 +25,13 @@
 
         &:last-child {
             .item-contacts__method {
-                background: rgba(53, 72, 110, 0.4);
+                background: rgba($bgAction, 0.6);
+                border: 1px solid rgba($bgAction, 0.6);
                 transition: background 0.2s ease-out;
 
                 @media (any-hover: hover) {
                     &:hover {
-                        background: rgba(53, 72, 110, 0.6);
+                        background: rgba(53, 72, 110, 0.7);
                     }
                 }
             }
@@ -69,8 +70,8 @@
 
         height: rem(170);
 
-        background: rgba(53, 72, 110, 0.1);
-        border: 1px solid rgba(53, 72, 110, 0.6);
+        background: rgba($bgAction, 0.1);
+        border: 1px solid rgba($bgAction, 0.2);
         border-radius: 16px;
     }
 }

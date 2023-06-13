@@ -6,7 +6,7 @@
     // .examples__title
     &__title {
         margin-bottom: rem(40);
-        @extend %h2;
+        @extend %h3-mobile;
     }
     // .examples__slider
     &__slider {
@@ -20,6 +20,7 @@
     }
     // .examples__slide
     &__slide {
+        width: rem(236);
     }
     // .examples__actions
     &__actions {

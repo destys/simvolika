@@ -112,7 +112,7 @@ function initSliders() {
 			modules: [Navigation, FreeMode],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 'auto',
 			spaceBetween: 16,
 			// autoHeight: true,
 			speed: 800,
@@ -131,7 +131,7 @@ function initSliders() {
 			},
 
 			// Брейкпоінти
-			breakpoints: {
+			/* breakpoints: {
 				768: {
 					slidesPerView: 2,
 				},
@@ -141,7 +141,7 @@ function initSliders() {
 				1268: {
 					slidesPerView: 4,
 				},
-			},
+			}, */
 
 			// Події
 			on: {
