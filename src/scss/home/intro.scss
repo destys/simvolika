@@ -1,5 +1,6 @@
 .intro {
-    margin-top: rem(8);
+    @include adaptiveValue("margin-top", 40, 8);
+    
     // .intro__container
     &__container {
         padding: 0 !important;
