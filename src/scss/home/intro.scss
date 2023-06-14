@@ -104,7 +104,7 @@
             display: none;
         }
 
-        @media (min-width: $mobileSmall) {
+        @media (min-width: $mobile) {
             ._pc {
                 display: block;
             }
