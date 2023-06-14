@@ -7,8 +7,9 @@ import { flsModules } from "./modules.js";
 
 const mpBtns = document.querySelectorAll('[data-mp]');
 const mpMobile = document.querySelector('.mp-mobile');
+const mbMobileOverlay = document.querySelector('.mp-mobile__overlay');
 
-if (mpBtns.length && mpMobile) {
+if (mpBtns.length && mpMobile && mbMobileOverlay) {
     const mpClose = mpMobile.querySelector('.mp__close');
 
     mpBtns.forEach(btn => {
@@ -21,15 +22,35 @@ if (mpBtns.length && mpMobile) {
                     btn.classList.add('_active');
                 }
             } else {
+                mbMobileOverlay.classList.add('_active')
                 mpMobile.classList.add('_active');
                 bodyLock(100);
+                if (e.target.classList.contains('.mp-mobile__overlay')) {
+                    mpMobile.classList.remove('_active');
+                    mbMobileOverlay.classList.remove('_active');
+                    bodyUnlock(100);
+                } else {
+                    mbMobileOverlay.classList.add('_active')
+                    mpMobile.classList.add('_active');
+                    bodyLock(100);
+                }
             }
         });
+    })
+
+    document.addEventListener('click', (e) => {
+        console.log('e: ', e.target);
+        if (e.target.classList.contains('mp-mobile__overlay')) {
+            mpMobile.classList.remove('_active');
+            mbMobileOverlay.classList.remove('_active');
+            bodyUnlock(100);
+        }
     })
 
     if (mpClose) {
         mpClose.addEventListener("click", function (e) {
             mpMobile.classList.remove('_active');
+            mbMobileOverlay.classList.remove('_active');
             bodyUnlock(100);
         });
     }

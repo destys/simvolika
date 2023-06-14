@@ -121,6 +121,21 @@
         transform: translateY(0);
     }
 
+    // .mp-mobile__overlay
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &._active {
+            display: block;
+            z-index: 40;
+        }
+    }
+
     @media (min-width: $tablet) {
         display: none;
     }
