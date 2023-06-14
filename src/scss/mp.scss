@@ -16,24 +16,50 @@
         color: #fff;
 
         padding: rem(16);
-        width: rem(390);
+        width: 0;
 
         opacity: 0;
         z-index: -1;
         transition: opacity 0.2s ease-out;
 
+        & > * {
+            display: none;
+        }
+
         ._active & {
             opacity: 1;
             z-index: 20;
+            width: rem(390);
+        }
+    }
+
+    // .mp__overlay
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        ._active & {
+            display: block;
+            z-index: 40;
         }
     }
 
     // .mp__list
     &__list {
-        display: flex;
         flex-direction: column;
         gap: rem(4);
         width: 100%;
+
+        position: relative;
+        z-index: 50;
+
+        ._active & {
+            display: flex;
+        }
     }
     // .mp__item
     &__item {
@@ -50,7 +76,7 @@
 
         width: 100%;
         transition: background 0.2s ease-out;
-        
+
         span {
             @extend %text-bold-m;
         }

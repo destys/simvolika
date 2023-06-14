@@ -13,8 +13,13 @@ if (mpBtns.length && mpMobile) {
 
     mpBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
+            const overlay = btn.querySelector('.mp__overlay');
             if (window.innerWidth > 991) {
-                btn.classList.toggle('_active');
+                if (e.target.classList.contains('mp__overlay')) {
+                    btn.classList.remove('_active');
+                } else {
+                    btn.classList.add('_active');
+                }
             } else {
                 mpMobile.classList.add('_active');
                 bodyLock(100);
