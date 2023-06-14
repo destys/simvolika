@@ -45,13 +45,20 @@
         align-items: center;
 
         padding: rem(12) rem(16) rem(12) rem(24);
-        background: rgba(53, 72, 110, 0.6);
+        background: rgba($bgAction, 0.6);
         border-radius: 8px;
 
         width: 100%;
-
+        transition: background 0.2s ease-out;
+        
         span {
             @extend %text-bold-m;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgba($bgAction, 0.3);
+            }
         }
     }
 
