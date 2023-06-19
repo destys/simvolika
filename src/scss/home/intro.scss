@@ -1,6 +1,4 @@
 .intro {
-    @include adaptiveValue("margin-top", 40, 8);
-    
     // .intro__container
     &__container {
         padding: 0 !important;
@@ -8,11 +6,6 @@
     }
     // .intro__slider
     &__slider {
-        margin-bottom: rem(16);
-
-        @media (min-width: $mobile) {
-            margin-bottom: 0;
-        }
     }
     // .intro__wrapper
     &__wrapper {
@@ -104,20 +97,27 @@
             display: none;
         }
 
-        @media (min-width: $mobile) {
-            ._pc {
-                display: block;
-            }
-            ._mobile {
-                display: none;
-            }
+        ._mobile {
         }
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
             object-position: bottom right;
+            object-fit: cover;
+        }
+
+        @media (min-width: $mobile) {
+            ._pc {
+                display: block;
+
+                img {
+                    object-fit: contain;
+                }
+            }
+            ._mobile {
+                display: none;
+            }
         }
     }
 }

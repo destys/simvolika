@@ -91,7 +91,15 @@ body {
 	}
 	// Прижимаем footer
 	> main {
+		padding-top: rem(85);
+
 		flex: 1 1 auto;
+		position: relative;
+		z-index: 2;
+
+		@media (min-width: $mobile) {
+			padding-top: rem(116);
+		}
 	}
 	// Фикс для слайдеров
 	> * {
