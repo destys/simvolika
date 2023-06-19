@@ -60,6 +60,10 @@
     &__title {
         margin-bottom: rem(16);
         color: $secondaryColor;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     // .slide-examples__button
     &__button {
