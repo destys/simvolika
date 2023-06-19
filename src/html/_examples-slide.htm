@@ -4,10 +4,11 @@
     </div>
     <div class="slide-examples__price">@@price ₽</div>
     <div class="slide-examples__title">@@title</div>
-    <button class="slide-examples__button button _arr _fw">
+    <button class="slide-examples__button button _arr _fw" data-mp="true">
         Купить
         <svg>
             <use xlink:href="@img/icons/icons.svg#up-down"></use>
-        </svg>
+        </svg> 
+        @@include('_mp.htm',{})
     </button>
 </div>

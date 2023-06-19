@@ -65,6 +65,11 @@
     &__button {
         padding: rem(8) rem(20);
         fill: #fff;
+
+        .mp {
+            bottom: 105%;
+            left: 0;
+        }
     }
 }
 .actions-examples {
